@@ -1,0 +1,101 @@
+/*#include "so_long.h"
+
+
+int main(int argc, char **argv)
+{
+    void *mlx_ptr;
+    void *win_ptr;
+    void *brick_ptr;
+    void *player_ptr;
+    void *lawn_ptr;
+    void *pipe_ptr;
+
+    t_img_data *piece = malloc(sizeof(t_img_data));
+    piece->mlx_ptr = mlx_ptr;
+    piece->win_ptr = win_ptr;
+    piece->piece_ptr = malloc(sizeof(void *));
+    piece->height = height;
+    piece->width = width;
+    (piece->frame) = malloc(sizeof(int));
+    *(piece->frame) = 0;
+
+    mlx_loop_hook(mlx_ptr, update_animation, piece);
+    mlx_loop(mlx_ptr);
+}*/
+
+/*int bfs(int row, int col, int dest_row, int dest_col, char **grid, int num_items) {
+  // Matrice pour stocker les cellules visitées
+  int visited[ROWS][COLS];
+
+  // Queues pour stocker les coordonnées des cellules à explorer
+  int rowQueue[ROWS*COLS], colQueue[ROWS*COLS];
+  int front = 0, rear = 0;
+
+  // Tableaux pour stocker les mouvements possibles
+  int rowMoves[] = {-1, 0, 1, 0};
+  int colMoves[] = {0, 1, 0, -1};
+
+  int rowCurrent, colCurrent, rowNext, colNext, i;
+
+  // Initialisation de la matrice visitée et du nombre d'items restants
+  for (i = 0; i < ROWS; i++) {
+    for (int j = 0; j < COLS; j++) {
+      visited[i][j] = 0;
+      if (grid[i][j] == 'C') {
+        num_items++;
+      }
+    }
+  }
+
+  // La case de départ est marquée comme visitée et ajoutée à la queue
+  visited[row][col] = 1;
+  rowQueue[rear] = row;
+  colQueue[rear] = col;
+  rear++;
+
+  // Tant que la queue n'est pas vide, continuer à explorer les cellules
+  while (front < rear) {
+    // Retirer la cellule actuelle de la queue
+    rowCurrent = rowQueue[front];
+    colCurrent = colQueue[front];
+    front++;
+
+    // Explorer les cellules adjacentes
+    for (i = 0; i < 4; i++) {
+      rowNext = rowCurrent + rowMoves[i];
+      colNext = colCurrent + colMoves[i];
+
+      // Vérifier si la cellule est en dehors de la grille
+      if (rowNext < 0 || rowNext >= ROWS || colNext < 0 || colNext >= COLS) {
+        continue;
+      }
+
+      // Vérifier si la cellule est un obstacle ou a déjà été visitée
+      if (grid[rowNext][colNext] == '1' || visited[rowNext][colNext] == 1) {
+        continue;
+      }
+
+      // Si la cellule suivante contient un item collectible, décrémenter le nombre d'items restants
+      if (grid[rowNext][colNext] == 'C') {
+        num_items--;
+      }
+
+      // Marquer la cellule suivante comme visitée et l'ajouter à la queue
+visited[rowNext][colNext] = 1;
+rowQueue[rear] = rowNext;
+colQueue[rear] = colNext;
+rear++;
+
+
+  // Vérifier si la cellule suivante est la destination
+  if (rowNext == dest_row && colNext == dest_col)
+  {
+    return 1;
+  }
+}
+
+}
+
+// Si la destination n'a pas été atteinte, retourner -1
+return -1;
+}*/
